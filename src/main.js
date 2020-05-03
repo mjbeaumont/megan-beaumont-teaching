@@ -8,6 +8,6 @@ export default function (Vue, { router, head, isClient }) {
   Vue.component('Layout', DefaultLayout)
   head.link.push({
     rel: 'stylesheet',
-    href: 'https://fonts.googleapis.com/css?family=Playfair+Display|Cabin'
+    href: 'https://fonts.googleapis.com/css?family=Lato|Cabin'
   })
 }

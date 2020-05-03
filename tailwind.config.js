@@ -2,7 +2,7 @@ module.exports = {
   purge: [],
   theme: {
     fontFamily: {
-      heading: ['Playfair Display', 'serif'],
+      heading: ['Lato', 'sans-serif'],
       body: ['Cabin', 'sans-serif']
     },
     extend: {
