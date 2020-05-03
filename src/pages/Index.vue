@@ -196,6 +196,7 @@
             type="text"
             id="name"
             placeholder="Name"
+            v-model="contactForm.name"
           />
           <label class="block text-gray-700 text-sm font-bold mb-2" for="name"
             >Email</label
@@ -205,6 +206,7 @@
             type="text"
             id="email"
             placeholder="Email"
+            v-model="contactForm.email"
           />
           <label class="block text-gray-700 text-sm font-bold mb-2" for="name"
             >Phone (optional)</label
@@ -214,6 +216,7 @@
             type="text"
             id="phone"
             placeholder="Phone"
+            v-model="contactForm.phone"
           />
           <label class="block text-gray-700 text-sm font-bold mb-2" for="name"
             >Message</label
@@ -226,6 +229,7 @@
             type="submit"
             value="Send Message"
             class="bg-primary-300 hover:bg-secondary-100 font-bold font-xl py-4 px-8 text-white tracking-wider rounded shadow transition-colors duration-300"
+            v-model="contactForm.message"
           />
         </form>
       </div>
