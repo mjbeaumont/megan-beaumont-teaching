@@ -1,14 +1,16 @@
 <template>
     <Layout>
-        <section class="w-full py-24 xl:py-56 md:pt-48 lg:py-32 xl:py-56 bg-primary-100 flex items-center justify-end hero relative">
-            <div class="w-6/12 hidden md:block">
-                <g-image src="@/assets/images/megan-homepage-2.png" class="absolute bottom-0 left-0 w-6/12"></g-image>
-            </div>
-            <div class="w-full md:w-6/12 flex">
-                <div class="w-4/5 max-w-md flex flex-col mx-auto">
-                    <h1 class="font-heading text-3xl mb-8 font-bold text-white tracking-wide">Personalized Clarinet &amp; Saxophone Lessons in Bergen County, NJ</h1>
-                    <a class="bg-secondary-300 hover:bg-secondary-100 font-bold font-xl py-4 px-8 text-white tracking-wider rounded shadow transition-colors duration-300 cursor-pointer w-40"
-                       @click.prevent="scrollToContent">Get Started</a>
+        <section class="w-full bg-primary-100 hero relative">
+            <div class="container flex items-center mx-auto py-24 md:pt-48 md:pb-8 lg:py-32 xl:py-48 relative h-full">
+                <div class="w-6/12 hidden md:block">
+                    <g-image src="@/assets/images/megan-homepage-2.png" class="absolute bottom-0 left-0 w-6/12 max-w-3xl"></g-image>
+                </div>
+                <div class="w-full md:w-6/12 flex">
+                    <div class="w-4/5 max-w-md flex flex-col mx-auto">
+                        <h1 class="font-heading text-3xl mb-8 font-bold text-white tracking-wide">Personalized Clarinet &amp; Saxophone Lessons in Bergen County, NJ</h1>
+                        <a class="bg-secondary-300 hover:bg-secondary-100 font-bold font-xl py-4 px-8 text-white tracking-wider rounded shadow transition-colors duration-300 cursor-pointer w-40"
+                           @click.prevent="scrollToContent">Get Started</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -89,7 +91,7 @@
                 </div>
             </div>
         </section>
-        <section class="w-full flex ">
+        <section class="w-full flex">
             <div class="container p-4 md:py-24 mx-auto flex flex-wrap justify-center">
                 <h2 class="text-3xl font-heading w-full text-center mb-16 font-semibold">Key Features</h2>
                 <ul class="list-none text-xl features">

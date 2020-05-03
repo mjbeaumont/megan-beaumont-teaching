@@ -1,13 +1,15 @@
 <template>
   <div class="layout">
-    <header class="header flex justify-between w-full px-16 fixed transition-all duration-300 bg-primary-100 z-10" :class="headerClass">
-      <strong>
-        <g-link to="/">&nbsp;</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/about/">About</g-link>
-      </nav>
+    <header class="header w-full px-16 fixed transition-all duration-300 bg-primary-100 z-10" :class="headerClass">
+      <div class="container flex justify-between mx-auto">
+        <strong>
+          <g-link to="/">&nbsp;</g-link>
+        </strong>
+        <nav class="nav">
+          <g-link class="nav__link" to="/">Home</g-link>
+          <g-link class="nav__link" to="/about/">About</g-link>
+        </nav>
+      </div>
     </header>
     <slot/>
   </div>
