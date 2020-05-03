@@ -267,7 +267,7 @@ export default {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: this.encode({
           "form-name": e.target.getAttribute("name"),
-          ...this.formData,
+          ...this.contactForm,
         }),
       })
         .then(() => console.log("submitted"))
