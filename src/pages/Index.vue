@@ -224,12 +224,12 @@
           <textarea
             class="shadow appearance-none border rounded w-full py-2 px-3 mb-4 h-32 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="message"
+            v-model="contactForm.message"
           ></textarea>
           <input
             type="submit"
             value="Send Message"
             class="bg-primary-300 hover:bg-secondary-100 font-bold font-xl py-4 px-8 text-white tracking-wider rounded shadow transition-colors duration-300"
-            v-model="contactForm.message"
           />
         </form>
       </div>
