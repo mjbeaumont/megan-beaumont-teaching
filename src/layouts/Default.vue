@@ -1,6 +1,9 @@
 <template>
   <div class="layout">
-    <header class="header w-full px-16 fixed transition-all duration-300 bg-primary-100 z-10" :class="headerClass">
+    <header
+      class="header w-full px-16 fixed transition-all duration-300 bg-primary-100 z-10"
+      :class="headerClass"
+    >
       <div class="container flex justify-between mx-auto">
         <strong>
           <g-link to="/">&nbsp;</g-link>
@@ -11,24 +14,24 @@
         </nav>
       </div>
     </header>
-    <slot/>
+    <slot />
   </div>
 </template>
 
 <static-query>
-query {
-  metadata {
-    siteName
+  query {
+    metadata {
+      siteName
+    }
   }
-}
 </static-query>
 
 <style lang="scss">
 body {
   font-family: "Cabin", sans-serif;
   font-size: 16px;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
   line-height: 1.5;
 }
 
@@ -48,7 +51,8 @@ body {
 
     .nav__link {
       @apply text-gray-600 text-lg;
-      &:hover, &.active {
+      &:hover,
+      &.active {
         @apply text-gray-800;
       }
     }
@@ -57,42 +61,44 @@ body {
 
 .nav__link {
   @apply text-xl text-gray-400 transition-colors duration-300 font-semibold ml-10;
-  &:hover, &.active {
+  &:hover,
+  &.active {
     @apply text-white;
   }
 }
 </style>
 
 <script>
-  export default {
-    computed: {
-      headerClass() {
-        return this.lastScrollPosition >= 80 ? 'shrink' : '';
-      }
+export default {
+  computed: {
+    headerClass() {
+      return this.lastScrollPosition >= 80 ? "shrink" : "";
     },
-    data() {
-      return {
-        lastScrollPosition: 0
+  },
+  data() {
+    return {
+      lastScrollPosition: 0,
+    };
+  },
+  methods: {
+    onScroll() {
+      // Get the current scroll position
+      const currentScrollPosition =
+        window.pageYOffset || document.documentElement.scrollTop;
+      // Because of momentum scrolling on mobiles, we shouldn't continue if it is less than zero
+      if (currentScrollPosition < 0) {
+        return;
       }
-    },
-    methods: {
-      onScroll () {
-        // Get the current scroll position
-        const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
-        // Because of momentum scrolling on mobiles, we shouldn't continue if it is less than zero
-        if (currentScrollPosition < 0) {
-          return
-        }
-        // Stop executing this function if the difference between
-        // current scroll position and last scroll position is less than some offset
-        if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 80) {
-          return
-        }
-        this.lastScrollPosition = currentScrollPosition
+      // Stop executing this function if the difference between
+      // current scroll position and last scroll position is less than some offset
+      if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 80) {
+        return;
       }
+      this.lastScrollPosition = currentScrollPosition;
     },
-    mounted() {
-      window.addEventListener('scroll', this.onScroll);
-    }
-  }
+  },
+  mounted() {
+    window.addEventListener("scroll", this.onScroll);
+  },
+};
 </script>

@@ -5,11 +5,11 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Megan Shumate Beaumont, Clarinet and Saxophone Teacher',
-  siteUrl: 'https://www.meganbeaumont.com',
+  siteName: "Megan Shumate Beaumont, Clarinet and Saxophone Teacher",
+  siteUrl: "https://www.meganbeaumont.com",
   plugins: [
     {
-      use: 'gridsome-plugin-tailwindcss'
-    }
-  ]
-}
+      use: "gridsome-plugin-tailwindcss",
+    },
+  ],
+};
