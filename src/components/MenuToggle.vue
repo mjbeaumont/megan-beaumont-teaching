@@ -26,25 +26,15 @@ export default {
 };
 </script>
 <style lang="scss">
-body {
-  font-size: 16px;
-  margin: 0;
-  padding: 0;
-  line-height: 1.5;
-  background: #000;
-  height: 100vh;
-}
-
 .mobile-toggle {
+  @apply relative rotate-0 cursor-pointer transition-all duration-500 ease-in-out;
   width: 40px;
   height: 30px;
-  position: relative;
-  transform: rotate(0deg);
-  transition: 0.5s ease-in-out;
-  cursor: pointer;
 
   &.open {
     span {
+      @apply bg-black;
+
       &:nth-child(1) {
         top: 12px;
         transform: rotate(135deg);
@@ -63,16 +53,9 @@ body {
   }
 
   span {
-    display: block;
-    position: absolute;
+    @apply block absolute w-full bg-white left-0 transform rotate-0 rounded-lg transition-all ease-in-out duration-300;
     height: 5px;
-    width: 100%;
-    background: #fff;
-    border-radius: 9px;
     opacity: 1;
-    left: 0;
-    transform: rotate(0deg);
-    transition: 0.25s ease-in-out;
 
     &:nth-child(1) {
       top: 0;
