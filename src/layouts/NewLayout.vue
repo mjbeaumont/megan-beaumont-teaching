@@ -1,17 +1,12 @@
 <template>
   <div class="layout">
-    <header class="text-white" :class="headerClass">
+    <header :class="headerClass">
       <MenuToggle
-        class="md:hidden mt-2 pr-4"
+        class="md:hidden pt-2 pr-4"
         :menu-open="menuOpen"
         @toggle="toggleMenu"
       />
-      <nav class="font-montserrat">
-        <a href="#" class="nav__link">Home</a>
-        <a href="#lessons" class="nav__link">Lessons</a>
-        <a href="#about" class="nav__link">About</a>
-        <a href="#contact" class="nav__link">Contact</a>
-      </nav>
+      <SiteNav :menu-open="menuOpen" />
     </header>
     <slot />
   </div>
@@ -34,16 +29,31 @@ body {
   background: #000;
   height: 100vh;
 }
+
+header {
+  @apply text-white;
+  &.open {
+    @apply bg-white text-black;
+  }
+}
 </style>
 
 <script>
 import MenuToggle from "~/components/MenuToggle";
+import SiteNav from "./SiteNav";
 
 export default {
-  components: { MenuToggle },
+  components: { SiteNav, MenuToggle },
   computed: {
     headerClass() {
-      return this.lastScrollPosition >= 80 ? "shrink" : "";
+      let headerClass = "";
+      if (this.menuOpen) {
+        headerClass += " open";
+      }
+      if (this.lastScrollPosition >= 80) {
+        headerClass += " shrink";
+      }
+      return headerClass;
     },
   },
   data() {
