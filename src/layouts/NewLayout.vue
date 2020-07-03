@@ -1,8 +1,11 @@
 <template>
   <div class="layout">
-    <header :class="headerClass" class="relative md:flex md:justify-between">
+    <header
+      :class="headerClass"
+      class="absolute top-0 left-0 w-full md:flex md:justify-end"
+    >
       <h1
-        class="text-lg pt-4 tracking-wide text-white logo font-light border-b border-white uppercase inline-block ml-4 md-hidden"
+        class="text-lg pt-4 tracking-wide text-white logo font-light border-b border-white uppercase inline-block ml-4 md:hidden"
       >
         Megan Shumate Beaumont
       </h1>
