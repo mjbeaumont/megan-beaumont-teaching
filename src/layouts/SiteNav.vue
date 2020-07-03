@@ -42,7 +42,7 @@ nav {
   @media screen and (min-width: 767px) {
     @apply scale-y-100 inline-block;
     a {
-      @apply border-b-0 py-6 inline-block w-1/4 pr-8 text-base uppercase font-semibold text-right;
+      @apply border-b-0 py-6 w-32 inline-block text-base uppercase font-semibold text-center;
     }
   }
 }
