@@ -31,6 +31,10 @@ export default {
   width: 40px;
   height: 30px;
 
+  &:focus {
+    @apply outline-none;
+  }
+
   &.open {
     span {
       @apply bg-black;
