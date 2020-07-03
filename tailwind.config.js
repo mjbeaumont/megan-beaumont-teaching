@@ -2,8 +2,9 @@ module.exports = {
   purge: [],
   theme: {
     fontFamily: {
-      heading: ["Lato", "sans-serif"],
-      body: ["Cabin", "sans-serif"],
+      montserrat: ["Montserrat", "Trebuchet MS", "Helvetica", "sans-serif"],
+      opensans: ["Open Sans", "Segoe UI", "Tahoma", "sans-serif"],
+      calluna: ["Calluna", "serif"],
     },
     extend: {
       colors: {
@@ -13,7 +14,7 @@ module.exports = {
         },
         secondary: {
           100: "#B35E00",
-          300: "#FF8600",
+          300: "#902121",
         },
       },
     },
