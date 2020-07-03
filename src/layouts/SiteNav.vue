@@ -1,5 +1,8 @@
 <template>
-  <nav class="font-montserrat transform" :class="navClass">
+  <nav
+    class="font-montserrat transform transition-transform duration-300 origin-top"
+    :class="navClass"
+  >
     <a href="#" class="nav__link">Home</a>
     <a href="#lessons" class="nav__link">Lessons</a>
     <a href="#about" class="nav__link">About</a>
@@ -21,8 +24,15 @@ export default {
 nav {
   @apply scale-y-0;
 
+  a {
+    @apply block w-full py-6 text-xl text-center border-b border-gray-300;
+  }
+
   &.open {
-    @apply scale-y-100;
+    @apply scale-y-100 bg-white;
+    a {
+      @apply text-black;
+    }
   }
 }
 </style>
