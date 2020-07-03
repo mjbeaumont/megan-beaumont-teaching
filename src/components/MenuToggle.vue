@@ -1,5 +1,5 @@
 <template>
-  <div class="flex w-full justify-end md:hidden">
+  <div class="flex w-full justify-end pt-2 pr-4 md:hidden">
     <button @click.prevent="toggle" class="mobile-toggle" :class="toggleClass">
       <span></span>
       <span></span>

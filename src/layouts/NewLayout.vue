@@ -1,11 +1,7 @@
 <template>
   <div class="layout">
-    <header :class="headerClass">
-      <MenuToggle
-        class="md:hidden pt-2 pr-4"
-        :menu-open="menuOpen"
-        @toggle="toggleMenu"
-      />
+    <header :class="headerClass" class="md:flex justify-end">
+      <MenuToggle :menu-open="menuOpen" @toggle="toggleMenu" />
       <SiteNav :menu-open="menuOpen" />
     </header>
     <slot />
