@@ -3,10 +3,10 @@
     class="font-montserrat transform transition-transform duration-300 origin-top lg:pr-10"
     :class="navClass"
   >
-    <a href="#" class="nav__link">Home</a>
-    <a href="#lessons" class="nav__link">Lessons</a>
-    <a href="#about" class="nav__link">About</a>
-    <a href="#contact" class="nav__link">Contact</a>
+    <a href="#" class="mt-2">Home</a>
+    <a href="#lessons">Lessons</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
   </nav>
 </template>
 <script>

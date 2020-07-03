@@ -1,6 +1,11 @@
 <template>
   <div class="layout">
-    <header :class="headerClass" class="md:flex justify-end">
+    <header :class="headerClass" class="relative md:flex md:justify-between">
+      <h1
+        class="text-lg pt-4 tracking-wide text-white logo font-light border-b border-white uppercase inline-block ml-4 md-hidden"
+      >
+        Megan Shumate Beaumont
+      </h1>
       <MenuToggle :menu-open="menuOpen" @toggle="toggleMenu" />
       <SiteNav :menu-open="menuOpen" />
     </header>
