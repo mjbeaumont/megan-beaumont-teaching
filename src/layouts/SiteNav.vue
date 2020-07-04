@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="font-montserrat transform transition-transform duration-300 origin-top lg:pr-10"
+    class="font-montserrat transform transition-transform duration-300 origin-top mt-12 md:mt-0 lg:pr-10"
     :class="navClass"
   >
     <a href="#" class="mt-2">Home</a>

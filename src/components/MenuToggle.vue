@@ -30,7 +30,6 @@ export default {
   @apply absolute;
   top: 20px;
   right: 30px;
-  height: 80px;
   .mobile-toggle {
     @apply relative rotate-0 cursor-pointer transition-all duration-500 ease-in-out;
     width: 40px;
